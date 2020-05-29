@@ -1,0 +1,32 @@
+// ==============================
+// Logo
+// =============================
+
+.logo-wrapper {
+  float: left;
+  padding: 0.25rem 0 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+
+  .logo {
+    font-size: $logo-font-size;
+    font-family: $logo-font-family;
+    color: white;
+    text-decoration: underline;
+  }
+
+  .author {
+    font-family: $logo-font-family;
+    font-size: $menu-link-font-size;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1rem;
+    color: white;
+  }
+}
+
+@include max-screen() {
+  .logo-wrapper {
+    display: none;
+  }
+}
