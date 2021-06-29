@@ -11,7 +11,7 @@ $theme-color-config: 'Azure Blue';
 $theme-color-map: (
   'Default': #c05b4d #f8f5ec,
   'Mint Green': #16982b #f5f5f5,
-  'Azure Blue': #1d7cf2 #f0f2f5,
+  'Azure Blue': #1d7cf2 #f8f9fa,
   'Hot Pink': #ff69b4 #f8f5f5,
   'Dark Violet': #9932cc #f5f4fa
 );
@@ -56,7 +56,7 @@ $global-lineheight: 1.5 !default;
 $global-font-family: Cambria, Charter, 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif !default;
 
 // Serif font family of the site.
-$global-serif-font-family: Athelas, STHeiti, Microsoft Yahei, serif !default;
+$global-serif-font-family: 'Seogi UI', Georgia, serif !default;
 
 // Background color of the site.
 $global-background: $white !default;
@@ -148,7 +148,7 @@ $post-nav-font-size: 18px !default;
 
 // ========== TOC ========== //
 // Width of the post toc.
-$post-toc-width: 200px !default;
+$post-toc-width: 230px !default;
 
 // Backgroud color of the post toc.
 $post-toc-backgroud: rgba($deputy-color, 0.6) !default;
@@ -186,7 +186,7 @@ $content-table-border-color: darken($deputy-color, 3%) !default;
 
 // ========== Code ========== //
 // Color of the code.
-$code-color: #c7254e !default;
+$code-color: #e8590c !default;
 
 // Font size of code.
 $code-font-size: 0.9em !default;
@@ -197,7 +197,7 @@ $code-font-family: Consolas, Monaco, Menlo, 'DejaVu Sans Mono',
 
 // Color of code highlight, solarized.
 $code-highlight-color: (
-  comment: #93a1a1,
+  comment: #868e96,
   keyword: #859900,
   number: #2aa198,
   title: #268bd2,
