@@ -8,7 +8,7 @@ code, pre {
 code {
   padding: 3px 5px;
   border-radius: 4px;
-  color: $code-color;
+  color: #55514a;
 }
 
 // highlight.js
@@ -215,29 +215,29 @@ figure.highlight {
   /* KeywordDeclaration */  .kd { color: #5c940d }
   /* KeywordNamespace */  .kn { color: #dc322f; font-weight: bold }
   /* KeywordPseudo */  .kp { color: #5c940d }
-  /* KeywordReserved */  .kr { color: #5c940d }
+  /* KeywordReserved */  .kr { color: #cc3399 }
   /* KeywordType */  .kt { color: #5c940d; font-weight: bold }
-  /* Name */  .n { color: #0047ab }
-  /* NameAttribute */  .na { color: #0047ab }
+  /* Name */  .n { color: #007af6 }
+  /* NameAttribute */  .na { color: #007af6 }
   /* NameBuiltin */  .nb { color: #cb4b16 }
-  /* NameBuiltinPseudo */  .bp { color: #0047ab }
+  /* NameBuiltinPseudo */  .bp { color: #007af6 }
   /* NameClass */  .nc { color: #cb4b16 }
-  /* NameConstant */  .no { color: #0047ab }
-  /* NameDecorator */  .nd { color: #0047ab }
-  /* NameEntity */  .ni { color: #0047ab }
-  /* NameException */  .ne { color: #0047ab }
-  /* NameFunction */  .nf { color: #0047ab }
-  /* NameFunctionMagic */  .fm { color: #0047ab }
-  /* NameLabel */  .nl { color: #0047ab }
-  /* NameNamespace */  .nn { color: #0047ab }
-  /* NameOther */  .nx { color: #0047ab }
-  /* NameProperty */  .py { color: #0047ab }
-  /* NameTag */  .nt { color: #0047ab; font-weight: bold }
-  /* NameVariable */  .nv { color: #0047ab }
-  /* NameVariableClass */  .vc { color: #0047ab }
-  /* NameVariableGlobal */  .vg { color: #0047ab }
-  /* NameVariableInstance */  .vi { color: #0047ab }
-  /* NameVariableMagic */  .vm { color: #0047ab }
+  /* NameConstant */  .no { color: #007af6 }
+  /* NameDecorator */  .nd { color: #007af6 }
+  /* NameEntity */  .ni { color: #007af6 }
+  /* NameException */  .ne { color: #007af6 }
+  /* NameFunction */  .nf { color: #007af6 }
+  /* NameFunctionMagic */  .fm { color: #007af6 }
+  /* NameLabel */  .nl { color: #007af6 }
+  /* NameNamespace */  .nn { color: #007af6 }
+  /* NameOther */  .nx { color: #007af6 }
+  /* NameProperty */  .py { color: #007af6 }
+  /* NameTag */  .nt { color: #007af6; font-weight: bold }
+  /* NameVariable */  .nv { color: #007af6 }
+  /* NameVariableClass */  .vc { color: #007af6 }
+  /* NameVariableGlobal */  .vg { color: #007af6 }
+  /* NameVariableInstance */  .vi { color: #007af6 }
+  /* NameVariableMagic */  .vm { color: #007af6 }
   /* Literal */  .l { color: #2aa198 }
   /* LiteralDate */  .ld { color: #2aa198 }
   /* LiteralString */  .s { color: #2aa198 }

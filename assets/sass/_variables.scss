@@ -11,7 +11,7 @@ $theme-color-config: 'Azure Blue';
 $theme-color-map: (
   'Default': #c05b4d #f8f5ec,
   'Mint Green': #16982b #f5f5f5,
-  'Azure Blue': #0047ab #f8f9fa,
+  'Azure Blue': #007af6 #f8f9fa,
   'Hot Pink': #ff69b4 #f8f5f5,
   'Dark Violet': #9932cc #f5f4fa
 );
@@ -50,7 +50,7 @@ $global-body-width: 800px !default;
 $global-container-padding: 0 20px !default;
 
 // Default line height for all type. `$global-lineheight` is 24px while `$global-font-size` is 16px.
-$global-lineheight: 1.5 !default;
+$global-lineheight: 1.625 !default;
 
 // Font family of the site.
 $global-font-family: Lato, Arial, sans-serif !default;
