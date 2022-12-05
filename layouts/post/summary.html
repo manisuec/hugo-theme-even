@@ -15,7 +15,7 @@
         <span class="more-meta"> {{ T "readingTime" .ReadingTime }} </span>
       {{- end }}
       <span
-      class="more-meta">{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
+      class="post-time">{{ if .Params.author }}{{ by .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
       <span>{{ partial "share-buttons.html" . }}</span>
     </div>
   </header>
