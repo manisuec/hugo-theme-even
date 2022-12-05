@@ -14,6 +14,8 @@
         <span class="more-meta"> {{ T "wordCount" .WordCount }} </span>
         <span class="more-meta"> {{ T "readingTime" .ReadingTime }} </span>
       {{- end }}
+      <span
+      class="more-meta">{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
       <span>{{ partial "share-buttons.html" . }}</span>
     </div>
   </header>
