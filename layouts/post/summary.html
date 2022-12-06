@@ -3,6 +3,15 @@
     <h1 class="post-title"><a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
     <div class="post-meta">
       <span class="post-time"> {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} </span>
+        {{- if .Site.Params.moreMeta }}
+        <!-- span class="more-meta"> {{ T "wordCount" .WordCount }}</span -->
+        <span class="more-meta">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="clock bi bi-clock-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+          </svg>
+        {{ T "readingTime" .ReadingTime }} 
+      </span>
+      {{- end }}
       {{ with .Params.categories -}}
         <div class="post-category">
           {{ range . -}}
@@ -10,10 +19,7 @@
           {{ end -}}
         </div>
       {{- end }}
-      {{- if .Site.Params.moreMeta }}
-        <span class="more-meta"> {{ T "wordCount" .WordCount }} </span>
-        <span class="more-meta"> {{ T "readingTime" .ReadingTime }} </span>
-      {{- end }}
+      <span>{{ partial "share-buttons.html" . }}</span>
     </div>
   </header>
   <!-- Content -->

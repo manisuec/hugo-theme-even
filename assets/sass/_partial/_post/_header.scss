@@ -18,29 +18,48 @@
 
     .post-time {
       font-size: 15px;
+      font-style: italic;
+      padding-right: 4px;
+
+      .post-author {
+        text-decoration: underline;
+      }
     }
 
     .post-category {
       display: inline;
+      font-size: 15px;    
+      border: 1px solid #9b9b9b;
+      border-radius: 25px;
+      padding: 5px 5px 5px 8px;
 
       a {
         color: inherit;
 
-        &::before {
-          content: '·';
-        }
-
         &:hover {
           color: $theme-color;
         }
+
       }
+    }
+
+    .clock {
+      vertical-align: middle;
+      padding-bottom: 4px;
+      padding-left: 4px;
     }
 
     .more-meta {
       &::before {
-        content: '·';
+        content: '|';
+        font-size: 18px;
+      }
+
+      &::after {
+        content: '|';
+        font-size: 18px;
+        padding-left: 4px;
       }
     }
-
   }
 }

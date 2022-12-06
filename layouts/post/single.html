@@ -5,21 +5,23 @@
       <h1 class="post-title">{{ .Title }}</h1>
 
       <div class="post-meta">
-        <span class="post-time"> {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} </span>
+        <span class="post-time">By <a href="https://manisuec.com" target="_blank" class="post-author">Manish Prasad</a> </span>
+        <span class="post-time">{{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} </span>
+        {{- if .Site.Params.moreMeta }}
+          <!-- span class="more-meta"> {{ T "wordCount" .WordCount }}</span -->
+          <span class="more-meta">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="clock bi bi-clock-fill" viewBox="0 0 16 16">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+            </svg>
+            {{ T "readingTime" .ReadingTime }} 
+          </span>
+        {{- end }}
         {{ with .Params.categories -}}
           <div class="post-category">
             {{ range . -}}
               <a href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> {{ . }} </a>
             {{ end -}}
           </div>
-        {{- end }}
-        {{- if .Site.Params.moreMeta }}
-          <span class="more-meta"> {{ T "wordCount" .WordCount }} </span>
-          <span class="more-meta"> {{ T "readingTime" .ReadingTime }} </span>
-        {{- end }}
-        {{ if and .Site.Params.busuanzi.enable .Site.Params.busuanzi.pagePV -}}
-          {{ $valueSpan := printf `<span id="busuanzi_value_page_pv"><img src="%s" alt="spinner.svg"/></span>` ("img/spinner.svg" | relURL) -}}
-          <span id="busuanzi_container_page_pv" class="more-meta"> {{ printf (T "pagePV") $valueSpan | safeHTML }} </span>
         {{- end }}
         <span>{{ partial "share-buttons.html" . }}</span>
       </div>
