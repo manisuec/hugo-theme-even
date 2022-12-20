@@ -64,13 +64,12 @@
   
       .profile {
         display: block;
-        // margin-top: -12px;
-        // margin-bottom: -12px;
         padding-right: 0.5rem;
        
         .img-fluid {
           border-radius: 50%!important;
           height: 36px;
+          border: 1px solid #0097A7;
         }
       }
     }
