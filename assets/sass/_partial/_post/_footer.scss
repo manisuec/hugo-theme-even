@@ -33,6 +33,10 @@
       transition-property: transform;
       transition-timing-function: ease-out;
       transition-duration: 0.3s;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 40%;
     }
 
     .prev {

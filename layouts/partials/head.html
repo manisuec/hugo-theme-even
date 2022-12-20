@@ -71,6 +71,7 @@
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 {{ if .Site.Params.publicCDN.enable -}}
 {{ if .Site.Params.fancybox }}{{ .Site.Params.publicCDN.fancyboxCSS | safeHTML }}{{ end }}
+{{ if .Site.Params.fontawesome }}{{ .Site.Params.publicCDN.fontawesome | safeHTML }}{{ end }}
 {{- else -}}
 {{ if .Site.Params.fancybox }}
 <link rel="stylesheet" href="{{ "lib/fancybox/jquery.fancybox-3.1.20.min.css" | relURL }}">{{ end }}

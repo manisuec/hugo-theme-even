@@ -46,6 +46,29 @@
       color: $theme-color;
     }
   }
+
+  .post-toc-tags {
+    font-family: $global-serif-font-family;
+    border-radius: 5px;
+
+    .post-tags {
+      padding: 5px;
+  
+      a {
+        margin-right: 5px;
+        color: $theme-color;
+  
+        &::before {
+          content: '#';
+        }
+      }
+    }
+  }
+
+  hr {
+    margin: 15px 10px 5px 10px;
+    border: 0.5px solid #9E9E9E;
+  }
 }
 
 @include max-screen($toc-max-sreen-width) {

@@ -1,23 +1,32 @@
-<div
-  style="background-image: url('/img/bg-min.jpg'); height: 7.5rem; width: 100%; vertical-align: middle; background-size: cover;">
-  <div class="logo-wrapper">
-    <a href="{{ "/" | relLangURL }}" class="logo">
-      {{- if .Site.Params.logoTitle -}}
-      {{ .Site.Params.logoTitle }}
-      {{- else -}}
-      {{ .Site.Title }}
-      {{- end -}}
-    </a>
-    <span class="author">by manisuec</span>
+<div class='container custom-nav' style="background-image: url('/img/bg-min.jpg'); width: 100%; vertical-align: middle;">
+  <header class='custom-nav-header'>
+    <span class='header-item logo site-navbar'>
+      <ul class="social-icons">
+        <a class="profile" href="https://manisuec.com" rel="nofollow" target="_blank"> 
+          <img src="/img/profile.jpg" alt="" class="img-fluid rounded-circle">
+        </a>
+        <span class="social-icon-item"><a href="//twitter.com/lifeClicks25" rel="nofollow" target="_blank" class="twitter"><i class="fa fa-twitter fa-slide" aria-hidden="true"></i></a></span>
+        <span class="social-icon-item"><a href="//github.com/manisuec" rel="nofollow" target="_blank" class="github"><i class="fa fa-github" aria-hidden="true"></i></a></span>
+        <span class="social-icon-item"><a href="//linkedin.com/in/manish-prasad-64448614/" rel="nofollow" target="_blank" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></span>
+      </ul>
+      <ul class="header-detail">
+        <span>Tech Insights...</span>
+        </ul>
+      <ul id="menu" class="menu">
+        {{ range .Site.Menus.main -}}
+        <li class="menu-item">
+          <a class="menu-item-link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
+        </li>
+        {{- end }}
+      </ul>
+    </span>
+  </header>
+  <div>
+    <nav class='vertical-align-middle scroll'>
+      <span class='nav-item'>Topics: </span>
+      {{range ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
+        <span class='nav-item menu-item-link'><a href="{{.Permalink}}">{{.Title}}</a></span>
+      {{end}} 
+    </nav>
   </div>
-
-  <nav class="site-navbar">
-    <ul id="menu" class="menu">
-      {{ range .Site.Menus.main -}}
-      <li class="menu-item">
-        <a class="menu-item-link" href="{{ .URL | safeURL }}">{{ .Name }}</a>
-      </li>
-      {{- end }}
-    </ul>
-  </nav>
 </div>

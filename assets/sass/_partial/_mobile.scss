@@ -20,9 +20,9 @@
   }
 
   .mobile-header-logo {
-    margin-right: 50px;
+    margin-right: 32px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: baseline;
 
     .logo {
@@ -38,6 +38,42 @@
       font-weight: 500;
       margin-left: 0.25rem;
     }
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      font-size: 1rem;
+      color: #fafafa;
+      padding-left: 1rem;
+      margin-top: -1px;
+  
+      .social-icon-item {
+        padding: 5px;
+        vertical-align: text-top;
+        // margin-bottom: -8px;
+  
+        :hover {
+          transform: rotate(360deg)scale(1.5);
+        }
+  
+        a {
+          color: #34495e;
+        }
+      }
+  
+      .profile {
+        display: block;
+        // margin-top: -12px;
+        // margin-bottom: -12px;
+        padding-right: 0.5rem;
+       
+        .img-fluid {
+          border-radius: 50%!important;
+          height: 36px;
+        }
+      }
+    }
   }
 
   .mobile-navbar-icon {
@@ -47,7 +83,8 @@
     font-size: 24px;
     text-align: center;
     float: left;
-    position: relative;
+    position: fixed;
+    top: 0.25rem;
     transition: background 0.5s;
 
     @include mobile-menu-icon();

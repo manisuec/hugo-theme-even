@@ -5,5 +5,15 @@
   <div class="post-toc-content{{ if not (or .Params.autoCollapseToc (and $globalAutoCollapseToc (ne .Params.autoCollapseToc false))) }} always-active{{ end }}">
     {{.TableOfContents}}
   </div>
+  <hr />
+  <div class="post-toc-tags">
+    {{ with .Params.tags -}}
+          <div class="post-tags">
+            {{ range . -}}
+              <a href="{{ "tags" | relLangURL }}/{{ . | urlize }}/">{{ . }}</a>
+            {{ end -}}
+          </div>
+        {{- end -}}
+  </div>
 </div>
 {{- end }}
