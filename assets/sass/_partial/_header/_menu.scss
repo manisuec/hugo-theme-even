@@ -68,11 +68,15 @@
       font-size: 0.875rem;
       font-style: italic;
     }
+    
+    .header-detail-title {
+      color: #fafafa;
+    }
   }
 }
 
 .custom-nav nav {
-  background: #727c87;
+  background: #37474F;
   white-space: nowrap;
   overflow-x: scroll; 
   -webkit-overflow-scrolling: touch;
