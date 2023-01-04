@@ -21,7 +21,7 @@
 <meta name="description" content="{{ .Site.Params.description | safeHTML }}" />
 {{- end -}}
 
-{{- if Params.Keywords -}}
+{{- if .Params.Keywords -}}
 {{ $length := len .Keywords | add -1 -}}
 <meta name="keywords"
   content="{{ range $index, $element := .Keywords }}{{ $element | safeHTML }}{{if ne $index $length }}, {{ end }}{{ end }}" />
