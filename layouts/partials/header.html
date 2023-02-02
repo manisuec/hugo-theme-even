@@ -24,7 +24,7 @@
   <div>
     <nav class='vertical-align-middle scroll'>
       <span class='nav-item'><a href="/"><i class="fa fa-home home-icon"></i></a></span>
-      <span class='nav-item menu-item-link'><a href="/posts">All:</a></span>
+      <span class='nav-item menu-item-link'><a href="/post">All Topics</a></span>
       {{range ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
         <span class='nav-item menu-item-link'><a href="{{.Permalink}}">{{.Title}}</a></span>
       {{end}} 
