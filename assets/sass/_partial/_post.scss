@@ -14,6 +14,11 @@
     border-top: $post-border;
   }
 
+  .summary-list {
+    display: flex;
+    align-items: center;
+  }
+
   @import '_post/header';
   @import '_post/toc';
   @import '_post/content';
