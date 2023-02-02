@@ -68,9 +68,11 @@
 }
 
 .post-thumbnail {
-  max-width: 4rem;
-  max-height: 4rem;
+  width: 4.25rem;
+  height: 4.25rem;
   margin-right: 0.5rem;
+  border-color: #455a64;
+  border: solid 0.5px;
 }
 
 @include max-screen() {
