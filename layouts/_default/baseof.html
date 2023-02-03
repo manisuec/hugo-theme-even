@@ -32,7 +32,15 @@
     </main>
 
     {{ if not .Params.hideHeaderAndFooter -}}
-    <footer id="footer" class="footer">
+    <footer id="footer" class="footer post-footer">
+     
+        {{ with .Params.tags -}}
+          <div class="post-tags">
+            {{ range . -}}
+              <a href="{{ "tags" | relLangURL }}/{{ . | urlize }}/">{{ . }}</a>
+            {{ end -}}
+          </div>
+        {{- end -}}
       {{ partial "footer.html" . }}
     </footer>
     {{- end }}
