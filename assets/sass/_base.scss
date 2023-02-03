@@ -101,6 +101,13 @@ a {
 .tag-container {
   font-size: 0.75rem;
 
+  .vertical-sep {
+    border-right: solid 1px;
+    border-right-color: #9e9e9e;
+    height: 10px;
+    display: inline-block;
+  }
+
   a {
     color: $theme-color;
     font-weight: 400;
