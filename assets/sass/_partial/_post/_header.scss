@@ -6,7 +6,7 @@
     font-size: $post-title-font-size;
     font-weight: $post-title-font-weight;
     font-family: $global-serif-font-family;
-    color: #455A64
+    color: $global-font-color
   }
 
   .post-link {
@@ -14,11 +14,11 @@
   }
 
   .post-meta {
-    font-size: 14px;
+    font-size: $post-meta-font-size;
     color: $post-meta-font-color;
 
     .post-time {
-      font-size: 15px;
+      font-size: $post-meta-font-size;
       font-style: italic;
       padding-right: 4px;
 
@@ -29,7 +29,7 @@
 
     .post-category {
       display: inline;
-      font-size: 15px;    
+      font-size: $post-meta-font-size;
       border: 1px solid #9b9b9b;
       border-radius: 25px;
       padding: 5px 5px 5px 8px;
@@ -68,13 +68,23 @@
 }
 
 .post-thumbnail {
-  width: 4.25rem;
-  height: 4.25rem;
+  width: 4rem;
+  height: 4rem;
   margin-right: 0.5rem;
+}
+
+.post-thumbnail-mob {
+  width: 1.625rem;
+  height: 1.625rem;
+  display: none !important;
 }
 
 @include max-screen() {
   .post-thumbnail {
     display: none;
+  }
+
+  .post-thumbnail-mob {
+    display: inline !important;
   }
 }

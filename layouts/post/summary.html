@@ -29,6 +29,9 @@
   <!-- Content -->
   <div class="post-content">
     <div class="post-summary">
+      {{- if .Params.thumbnail }}
+        <img class="post-thumbnail-mob" src="{{ .Params.thumbnail }}">
+      {{- end }}
       {{ .Summary }}
     </div>
     <div class="read-more">

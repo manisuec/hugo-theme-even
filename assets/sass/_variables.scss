@@ -34,11 +34,11 @@ $black: #0a0a0a !default;
 $white: #fefefe !default;
 $light-gray: #e6e6e6 !default;
 $gray: #cacaca !default;
-$dark-gray: #8a8a8a !default;
+$dark-gray: #757575 !default;
 
 // ========== Global ========== //
 // Text color of the body.
-$global-font-color: #34495e !default;
+$global-font-color: #37474F !default;
 
 // Font size attribute applied to '<html>' and '<body>'.
 $global-font-size: 1.125rem !default;
@@ -127,6 +127,9 @@ $post-title-font-weight: 400 !default;
 
 // Margin top of the post meta (post time).
 $post-meta-margin-top: 5px !default;
+
+// Font size of post meta.
+$post-meta-font-size: 14px !default;
 
 // Font color of the post meta.
 $post-meta-font-color: $dark-gray !default;
