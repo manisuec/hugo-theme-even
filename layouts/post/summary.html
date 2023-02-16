@@ -1,7 +1,7 @@
 <article class="post">
   <header class="post-header summary-list">
     {{- if .Params.thumbnail }}
-      <img class="post-thumbnail" src="{{ .Params.thumbnail }}">
+      <img class="post-thumbnail" src="{{ .Params.thumbnail }}" alt="" aria-label="thumbnail-image">
     {{- end }}
     <div>
     <h1 class="post-title"><a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
@@ -30,12 +30,12 @@
   <div class="post-content">
     <div class="post-summary">
       {{- if .Params.thumbnail }}
-        <img class="post-thumbnail-mob" src="{{ .Params.thumbnail }}">
+        <img class="post-thumbnail-mob" src="{{ .Params.thumbnail }}" alt="" aria-label="thumbnail-image">
       {{- end }}
       {{ .Summary }}
     </div>
     <div class="read-more">
-      <a href="{{ .RelPermalink }}" class="read-more-link">{{ T "readMore" }}</a>
+      <a href="{{ .RelPermalink }}" class="read-more-link" aria-label="read more">{{ T "readMore" }}</a>
     </div>
   </div>
 </article>
