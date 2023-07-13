@@ -24,11 +24,13 @@
   #share-item {
     font-size: 1.2rem;
     vertical-align: bottom;
-    padding: 4px 0 4px 4px;
+    padding: 6px 0 6px 6px;
   }
 #share-item > a {color: #00838F;}
 </style>
 <div id="share-buttons">
-  <span id="share-item"><a href="https://twitter.com/share?url={{ $pageurl }}&text={{ $title }}&hashtags=tech,blog,techinsights&via=lifeClicks25" rel="nofollow" target="_blank" class="twitter"><i class="fa fa-twitter-square fa-slide" aria-hidden="true"></i></a></span>
-  <span id="share-item"><a href="https://linkedin.com/shareArticle?mini=true&url={{ $pageurl }}&title={{ $title }}" rel="nofollow" target="_blank" class="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></span>
+  <span id="share-item"><a href="https://twitter.com/share?url={{ $pageurl }}&text={{ $title }}&hashtags=tech,blog,techinsights&via=lifeClicks25" rel="nofollow" target="_blank" class="twitter"><i class="fa-brands fa-square-twitter fa-slide" aria-hidden="true"></i></a></span>
+  <span id="share-item"><a href="https://linkedin.com/shareArticle?mini=true&url={{ $pageurl }}&title={{ $title }}" rel="nofollow" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></span>
+  <span id="share-item"><a href="https://api.whatsapp.com/send?text={{ $title }} {{ $pageurl }}" rel="nofollow" target="_blank" class="whatsapp"><i class="fa-brands fa-whatsapp-square" aria-hidden="true"></i></a></span>
+  <span id="share-item"><a href="https://pinterest.com/pin/create/button/?url={{ $pageurl }}" rel="nofollow" target="_blank" class="pinterest"><i class="fa-brands fa-pinterest" aria-hidden="true"></i></a></span>
 </div>
