@@ -1,10 +1,11 @@
 <article class="post">
   <header class="post-header summary-list">
     {{- if .Params.thumbnail }}
-      <img class="post-thumbnail" src="{{ .Params.thumbnail }}" alt="" aria-label="thumbnail-image">
+      {{ $delimitedCat := delimit $.Params.categories ", " }}
+      <img class="post-thumbnail" src="{{ .Params.thumbnail }}" alt="{{ $delimitedCat }}" title="{{ $delimitedCat }}" aria-label="thumbnail-image">
     {{- end }}
     <div>
-    <h1 class="post-title"><a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+    <div class="post-title"><a class="post-link" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></div>
     <div class="post-meta">
       <span class="post-time"> {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} </span>
         {{- if .Site.Params.moreMeta }}
@@ -19,7 +20,7 @@
       {{ with .Params.categories -}}
         <div class="post-category">
           {{ range . -}}
-            <a href="{{ "categories" | relLangURL }}/{{ . | urlize }}/"> {{ . }} </a>
+            <a href="{{ "categories" | relLangURL }}/{{ . | urlize }}/" title="{{ . }}"> {{ . }} </a>
           {{ end -}}
         </div>
       {{- end }}
@@ -30,12 +31,13 @@
   <div class="post-content">
     <div class="post-summary">
       {{- if .Params.thumbnail }}
-        <img class="post-thumbnail-mob" src="{{ .Params.thumbnail }}" alt="" aria-label="thumbnail-image">
+        {{ $delimitedCat := delimit $.Params.categories ", " }}
+        <img class="post-thumbnail-mob" src="{{ .Params.thumbnail }}" alt="{{ $delimitedCat }}" title="{{ $delimitedCat }}" aria-label="thumbnail-image">
       {{- end }}
       {{ .Summary }}
     </div>
     <div class="read-more">
-      <a href="{{ .RelPermalink }}" class="read-more-link" aria-label="read more">{{ T "readMore" }}</a>
+      <a href="{{ .RelPermalink }}" class="read-more-link" title="read more" aria-label="read more">{{ T "readMore" }}</a>
     </div>
   </div>
 </article>
