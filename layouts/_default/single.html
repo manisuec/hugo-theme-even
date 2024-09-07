@@ -4,4 +4,11 @@
     {{ .Content }}
   </div>
 </article>
+<hr />
+<div class="container tag-container">
+  <div class="px-3">All Tags:
+    {{ partial "tags.html" . }}
+  </div>
+</div>
+<hr />
 {{- end }}
