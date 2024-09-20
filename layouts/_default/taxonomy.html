@@ -49,4 +49,9 @@
   {{ partial "tags.html" . }}
 </div>
 <hr />
+
+<!-- mailerlite -->
+{{- if .Site.Params.mailerlite.enable }}
+<div class="ml-embedded" data-form="gbe9ru"></div>
+{{- end }}
 {{- end }}
