@@ -2,8 +2,9 @@
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">{{ T "author" }}</span>
-    <span
-      class="item-content">{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
+    <span><a href="https://medium.com/@manisuec" target="_blank"><img alt="Medium" src="https://img.shields.io/badge/Medium-black?style=for-the-badge&logo=medium&logoColor=white"/></a></span>
+    <span class="item-content">{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}
+    </span>
   </p>
   <p class="copyright-item">
     <span class="buymeacoffee-text">
