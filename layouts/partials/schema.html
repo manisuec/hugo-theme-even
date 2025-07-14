@@ -2,23 +2,22 @@
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "articleLanguage": "{{ .Site.LanguageCode }}",
+    "inLanguage": "{{ .Site.LanguageCode }}",
     "headline": "{{ .Title }}",
     "description": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}",
-    "image": "{{ if .Params.images }}{{ .Params.images | absURL }}{{ else }}{{ .Site.Params.images | absURL }}{{ end }}",
+    "image": "{{ with .Params.images }}{{ $img := . }}{{ with (index $img 0) }}{{ . | absURL }}{{ else }}{{ $img | absURL }}{{ end }}{{ else }}{{ with .Site.Params.images }}{{ $img := . }}{{ with (index $img 0) }}{{ . | absURL }}{{ else }}{{ $img | absURL }}{{ end }}{{ end }}{{ end }}",
     "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
     "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
     "author": {
       "@type": "Person",
-      "name": "{{ .Site.Author.name }}",
-      "url": "{{ .Site.Author.url }}"
+      "name": "{{ .Site.Params.Author.name }}",
+      "url": "{{ .Site.Params.Author.url }}"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "{{ .Permalink }}"
     },
     "keywords": "{{ if .Keywords }}{{ delimit .Keywords ", " }}{{ else }}{{ delimit .Site.Params.keywords ", " }}{{ end }}",
-    "articleTag": "{{ if .Params.Tags }}{{ range $tags := .Params.Tags }}{{ $tags }},{{ end }}{{ else }}{{ range $tags := .Site.Params.tags }}{{ $tags }},{{ end }}{{ end }}",
-    "articleCategory": "{{ if .Params.Categories }}{{ range $categories := .Params.Categories }}{{ $categories }},{{ end }}{{ else }}{{ range $categories := .Site.Params.categories }}{{ $categories }},{{ end }}{{ end }}"
+    "articleSection": "{{ if .Params.Categories }}{{ range $categories := .Params.Categories }}{{ $categories }},{{ end }}{{ else }}{{ range $categories := .Site.Params.categories }}{{ $categories }},{{ end }}{{ end }}"
   }
   </script>
