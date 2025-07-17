@@ -18,6 +18,6 @@
       "@id": "{{ .Permalink }}"
     },
     "keywords": "{{ if .Keywords }}{{ delimit .Keywords ", " }}{{ else }}{{ delimit .Site.Params.keywords ", " }}{{ end }}",
-    "articleSection": "{{ if .Params.Categories }}{{ range $categories := .Params.Categories }}{{ $categories }},{{ end }}{{ else }}{{ range $categories := .Site.Params.categories }}{{ $categories }},{{ end }}{{ end }}"
+    "articleSection": "{{ if .Params.Categories }}{{ range $categories := .Params.Categories }}{{ $categories }}{{ end }}{{ else }}{{ range $categories := .Site.Params.categories }}{{ $categories }}{{ end }}{{ end }}"
   }
   </script>
